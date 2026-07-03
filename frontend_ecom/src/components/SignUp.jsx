@@ -56,7 +56,7 @@ export function SignUp() {
           />
         </div>
 
-        <button type="submit" className="auth-btn">Sign Up</button>
+        <button type="submit" className="auth-btn"><Link to="/AddProduct">Sign Up</Link></button>
 
         {/* Dynamic status messages rendered below the button */}
         {successMessage && <p className="status-success">{successMessage}</p>}

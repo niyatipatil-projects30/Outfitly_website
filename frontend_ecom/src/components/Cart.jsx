@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Tan_Top from "../assets/TanTop.jpg";
+import DeminJaket from"../assets/Demin Jaket.jpg";
 
  export function Cart() {
   const [cartItems, setCartItems] = useState([
@@ -7,16 +9,16 @@ import React, { useState } from "react";
       name: "tan Top",
       price: 250,
       quantity: 1,
-      image:
-        "src/components/TanTop.jpg",
+      image:Tan_Top 
+       ,
     },
     {
       id: 2,
       name: "Demin Jaket",
       price: 999,
       quantity: 1,
-      image:
-        "src/components/Demin Jaket.jpg",
+      image:DeminJaket
+        ,
     },
   ]);
 

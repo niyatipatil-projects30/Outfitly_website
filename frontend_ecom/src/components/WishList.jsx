@@ -1,4 +1,6 @@
 import "./WishList.css";
+import Polkadotsmidskirt from"../assets/mid skirt.jpg";
+import OverSizedTea from"../assets/over-sized Tea.jpg";
 
 export function WishList() {
   const wishlistItems = [
@@ -6,13 +8,13 @@ export function WishList() {
       id: 1,
       name: "mid skirt",
       price: "₹799",
-      image: "src/components/mid skirt.jpg",
+      image: Polkadotsmidskirt,
     },
     {
       id: 2,
       name: "Over sized Tea",
       price: "₹299",
-      image: "src/components/over-sized Tea.jpg",
+      image:OverSizedTea ,
     },
   ];
 

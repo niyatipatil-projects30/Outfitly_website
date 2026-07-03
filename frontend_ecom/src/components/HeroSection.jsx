@@ -1,18 +1,13 @@
 import "./HeroSection.css";
 import { useNavigate } from 'react-router-dom';
+import HeroImg from '../assets/HeroImg.jpg';
 export function HeroSection() {
-  // const navigate = useNavigate();
-
-  // const handleShopNowClick = () => {
-  //   if (session) {
-  //     // User is logged in, take them straight to your main ecommerce shop page
-  //     navigate('/shop');
-  //   } else {
-  //     // User is new, redirect to the Sign Up component
-  //     navigate('/signup');
-
+  
   return (
-    <div className="hero">
+    <div
+  className="hero"
+  style={{ backgroundImage: `url(${HeroImg})` }}
+>
       <div className="hero-content">
         <h1>Trendy Collection</h1>
         <br/>

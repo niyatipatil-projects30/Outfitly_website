@@ -61,7 +61,7 @@ export function Login() {
         {successMessage && <p className="status-success">{successMessage}</p>}
         {errorMessage && <p className="status-error">{errorMessage}</p>}
         <p style={{ textAlign: 'center', marginTop: '15px', fontSize: '14px' }}>
-  New to our store? <Link to="/" style={{ color: '#3b82f6', fontWeight: '600' }}>Sign up here</Link>
+  New to our store? <Link to="/signup" style={{ color: '#3b82f6', fontWeight: '600' }}>Sign up here</Link>
 </p>
       </form>
     </div>

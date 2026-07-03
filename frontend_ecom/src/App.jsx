@@ -8,10 +8,10 @@ import { Contact } from "./components/Contact";
 import { AddProduct } from "./components/AddProduct";
 import { SignUp } from './components/SignUp';
 import { Login } from "./components/Login";
-
+import { supabase } from "./database";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
-import { supabase } from "./database";
+import Scanner from './pages/Scanner';
 
 export function App() {
   const [session, setSession] = useState(null);
@@ -41,13 +41,13 @@ export function App() {
         <h1 style={{ textAlign: 'center', marginTop: '20px' }}>Outfitly</h1>
         
         <Routes>
-          <Route path="/"element={<SignUp/>}/>
+          <Route path="/"element={<Home/>}/>
           <Route path="/login"element={<Login/>}/>
           <Route path="/" element={!session ? <SignUp /> : <Navigate to="/home" />} />
-          
+         
           {/* Authentication Routes */}
-          <Route path="/signup" element={!session ? <SignUp /> : <Navigate to="/home" />} />
-          <Route path="/login" element={!session ? <Login /> : <Navigate to="/home" />} />
+          <Route path="/signup" element={!session ? <SignUp /> : <Navigate to="/AddProduct" />} />
+          <Route path="/login" element={!session ? <Login /> : <Navigate to="/AddProduct" />} />
 
           {/* CHANGE 2: Your old landing page/Hero section is now moved to its own distinct URL path */}
           <Route path="/home" element={<Home session={session} />} />
@@ -62,6 +62,7 @@ export function App() {
           {/* Public Pages */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/scanner" element={<Scanner />} />
         </Routes>
       </div>
     

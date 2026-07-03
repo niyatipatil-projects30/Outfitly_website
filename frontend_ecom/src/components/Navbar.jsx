@@ -31,6 +31,20 @@ export function Navbar({ session }) {
           <li><Link to="/products">Products</Link></li>
           <li><Link to="/cart">Cart</Link></li>
           <li><Link to="/about">About</Link></li>
+          
+          {/* Sparkle AI Scanner Link */}
+          <li className="scanner-icon-link">
+            <Link to="/scanner" title="AI Fit Scanner">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                style={{ width: "18px", height: "18px", display: "block" }}
+              >
+                <path d="M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8L12 2zm6 13.5l1.2 2.4 2.6.4-1.9 1.8.4 2.6-2.3-1.2-2.3 1.2.4-2.6-1.9-1.8 2.6-.4 1.2-2.4z" />
+              </svg>
+            </Link>
+          </li>
 
           <li className="more">
             More
@@ -47,7 +61,7 @@ export function Navbar({ session }) {
                 <p><Link to="/login" style={{ color: '#3b82f6', fontWeight: 'bold' }}>Login</Link></p>
               )}
               
-              <Link to="/AddProduct">
+              <Link to="/signup">
                 <button>Add-Product</button>
               </Link>
             </div>
@@ -78,6 +92,7 @@ export function Navbar({ session }) {
         .nav-links {
           list-style: none;
           display: flex;
+          align-items: center; /* Added to keep icon vertically aligned with text links */
           gap: 22px;
           margin: 0;
           padding: 0;
@@ -97,6 +112,12 @@ export function Navbar({ session }) {
 
         .nav-links li:hover {
           color: #00d4ff;
+        }
+
+        /* Specific hover color glow for your sparkle icon link */
+        .scanner-icon-link:hover {
+          color: #22d3ee;
+          filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.8));
         }
 
         /* dropdown */

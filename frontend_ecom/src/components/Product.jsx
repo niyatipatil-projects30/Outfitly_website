@@ -1,47 +1,52 @@
 import "./Product.css";
 import { useState, useEffect } from "react";
 import { supabase } from "../database";
+import OverSizedTea from "../assets/over-sized Tea.jpg";
+import SummerFit from"../assets/summer fit' yumi kim'.jpg";
+import Polkadotsmidskirt from"../assets/mid skirt.jpg";
+import DenimJacket from "../assets/Demin Jaket.jpg";
+import RedGinghamTop from "../assets/Red Gingham Top.jpg"
+import WidLegPants from"../assets/Wid led pants.jpg";
+
 const staticProducts = [
-  {
-    id: 1,
-    name: "Oversized Tea",
-    price: "₹399",
-    image: "src/components/Over Sized Tea.jpg",
-    description: "Comfortable oversized cotton t-shirt."
-  },
+   { id: 1, name: "Oversized Tea",
+     price: "₹399",
+      image: OverSizedTea, 
+      description: "Comfortable oversized cotton t-shirt."
+   },
   {
     id: 2,
     name: "Summer Fit",
     price: "₹499",
-    image: "src/components/summer fit' yumi kim'.jpg",
+    image: SummerFit,
     description: "Stylish summer dress for casual outings."
   },
   {
     id: 3,
     name: "Polka dots mid skirt",
     price: "₹799",
-    image: "src/components/mid skirt.jpg",
+    image:Polkadotsmidskirt ,
     description: "Simple and trendy skirt."
   },
   {
     id: 4,
     name: "Denim Jacket",
     price: "₹999",
-    image: "src/components/Demin Jaket.jpg",
+    image:DenimJacket ,
     description: "Classic denim jacket."
   },
   {
     id: 5,
     name: "Red Gingham Top",
     price: "₹699",
-    image: "src/components/Red Gingham Top.jpg",
+    image: RedGinghamTop ,
     description: "Gurly Top."
   },
   {
     id: 6,
     name: "Wid Leg Pants",
     price: "₹899",
-    image: "src/components/Wid led pants.jpg",
+    image:  WidLegPants,
     description: "Classic denim jacket."
   }
 ];
@@ -62,13 +67,6 @@ export function Product() {
   });
   getProducts();
 }
-//   const { error } = await supabase.from("products").delete().eq("id", id);
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     getProducts(); 
-//   }
-// }
 
   useEffect(() => {
     getProducts();

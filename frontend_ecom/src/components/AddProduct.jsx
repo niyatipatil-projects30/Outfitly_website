@@ -1,6 +1,5 @@
  import { useState } from 'react'
-import { isAuthImplicitGrantRedirectError } from '@supabase/supabase-js'
-import { supabase } from '../database'
+
 import "./AddProduct.css"
 import { Link } from 'react-router-dom'
 export function AddProduct(){
