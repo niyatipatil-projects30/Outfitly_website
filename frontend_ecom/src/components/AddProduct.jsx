@@ -1,5 +1,4 @@
  import { useState } from 'react'
-
 import "./AddProduct.css"
 import { Link } from 'react-router-dom'
 export function AddProduct(){
@@ -7,10 +6,11 @@ export function AddProduct(){
   const[description,setdescription]=useState("")
   const[price,setPrice]=useState(0)
   const[img,setImg]=useState("")
+const API = import.meta.env.VITE_API_URL;
 
   async function handleAdd() {
   
-  await fetch("http://localhost:5001/products", {
+  await fetch(`${API}/products`, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

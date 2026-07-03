@@ -53,16 +53,16 @@ const staticProducts = [
 
 export function Product() {
   const [dbProducts, setDbProducts] = useState([]);
-
+const API = import.meta.env.VITE_API_URL;
   //read function
   async function getProducts() {
-  const res = await fetch("http://localhost:5001/products");
+  const res = await fetch(`${API}/products`);
   const data= await res.json();
   setDbProducts(data);
 }
 //delete function 
   async function deleteProduct(id) {
-  await fetch(`http://localhost:5001/products/${id}`, {
+  await fetch(`${API}/products/${id}`, {
     method: "DELETE",
   });
   getProducts();
